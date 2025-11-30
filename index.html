@@ -1,133 +1,70 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rexus Innovation</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-            line-height: 1.6;
-        }
-        header {
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            margin-right: 20px;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 0;
-        }
-        h1, h2 {
-            margin-bottom: 15px;
-        }
-        section {
-            margin-bottom: 60px;
-        }
-        .hero img {
-            width: 100%;
-            max-width: 700px;
-            display: block;
-            margin: 20px auto;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            max-width: 400px;
-        }
-        input, textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px;
-            border: none;
-            background: #000;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        footer {
-            background: #111;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        footer a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#servizi">Servizi</a>
-        <a href="#chi-siamo">Chi Siamo</a>
-        <a href="#contatti">Contatti</a>
-    </nav>
-</header>
+    <header class="header">
+        <nav>
+            <img src="logo.png" class="logo" alt="Rexus Innovation Logo">
+            <ul>
+                <li><a href="#servizi">Servizi</a></li>
+                <li><a href="#chi-siamo">Chi Siamo</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="container" id="home">
-    <h1>Rexus Innovation</h1>
-    <p>Sviluppiamo esperienze digitali potenti, eleganti e performanti.</p>
+    <section class="hero">
+        <h1>Rexus Innovation</h1>
+        <p>Sviluppiamo esperienze digitali potenti, eleganti e performanti.</p>
+        <a href="#contatti" class="btn">Contattaci</a>
+    </section>
 
-    <div class="hero">
-        <img src="hero.jpg" alt="Hero mockup" />
-    </div>
-</div>
+    <section class="section" id="servizi">
+        <h2>Servizi</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Siti Web</h3>
+                <p>Sviluppiamo siti moderni, veloci e ottimizzati.</p>
+            </div>
 
-<div class="container" id="servizi">
-    <h2>Servizi</h2>
-    <h3>Siti Web</h3>
-    <p>Sviluppiamo siti moderni, veloci e ottimizzati.</p>
+            <div class="card">
+                <h3>UI / UX Design</h3>
+                <p>Interfacce chiare, fluide e orientate alla conversione.</p>
+            </div>
 
-    <h3>UI / UX Design</h3>
-    <p>Interfacce chiare, fluide e orientate alla conversione.</p>
+            <div class="card">
+                <h3>Automazioni</h3>
+                <p>Bot, API, integrazioni avanzate e sistemi di pagamento.</p>
+            </div>
+        </div>
+    </section>
 
-    <h3>Automazioni</h3>
-    <p>Bot, API, integrazioni avanzate e sistemi di pagamento.</p>
-</div>
+    <section class="section" id="chi-siamo">
+        <h2>Chi Siamo</h2>
+        <p>Rexus Innovation unisce design moderno e ingegneria digitale per creare soluzioni potenti,
+        funzionali e visivamente impeccabili.</p>
+    </section>
 
-<div class="container" id="chi-siamo">
-    <h2>Chi Siamo</h2>
-    <p>Rexus Innovation unisce design moderno e ingegneria digitale per creare soluzioni potenti, funzionali e visivamente impeccabili.</p>
-</div>
+    <section class="section" id="contatti">
+        <h2>Contattaci</h2>
+        <form class="form">
+            <textarea placeholder="Il tuo messaggio..."></textarea>
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="Email">
+            <button type="submit">Invia</button>
+        </form>
+    </section>
 
-<div class="container" id="contatti">
-    <h2>Contattaci</h2>
-    <form>
-        <textarea placeholder="Il tuo messaggio..."></textarea>
-        <input type="text" placeholder="Nome" />
-        <input type="email" placeholder="Email" />
-        <button type="submit">Invia</button>
-    </form>
-</div>
-
-<footer>
-    <p>© Rexus Innovation</p>
-    <a href="#">Privacy</a>
-    <a href="#">Termini</a>
-</footer>
+    <footer>
+        <p>© Rexus Innovation</p>
+        <a href="#">Privacy</a> • <a href="#">Termini</a>
+    </footer>
 
 </body>
 </html>
