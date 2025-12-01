@@ -27,19 +27,25 @@ header {
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: 700;
-    color: #1a1a1a;
-}
-
-.logo span {
-    color: #2b62d9;
-}
-
-nav ul {
     display: flex;
-    gap: 35px;
-    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo .subtitle {
+    font-size: 12px;
+    margin-top: 2px;
+    color: rgb(120,120,120);
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
 nav a {
@@ -56,31 +62,68 @@ nav a:hover {
 /* ---------------- HERO ---------------- */
 .hero {
     width: 100%;
-    padding: 180px 120px;
+    padding: 140px 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
+    background: #0A0A2A;
+    color: white;
 }
 
-.hero-text {
-    max-width: 650px;
+.overlay {
+    background-image: url('assets/mesh.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    opacity: 0.45;
+    z-index: 1;
+}
+
+.hero .content {
+    text-align: center;
+    z-index: 2;
+    max-width: 700px;
 }
 
 .hero h1 {
-    font-size: 55px;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 48px;
+    font-weight: 600;
 }
 
-.hero h1 span {
-    color: #2b62d9;
+.hero .blue {
+    color: #4db8ff;
 }
 
 .hero p {
-    font-size: 18px;
-    color: #666;
     margin-top: 20px;
-    line-height: 1.6;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 12px 35px;
+    background: #007bff;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 500;
+    border: 2px solid #007bff;
+}
+
+.btn-outline {
+    padding: 12px 35px;
+    border-radius: 25px;
+    color: #007bff;
+    border: 2px solid #007bff;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 /* ---------------- ABOUT / CHI SIAMO ---------------- */
@@ -180,45 +223,71 @@ nav a:hover {
     gap: 30px;
 }
 
-/* CARD BASE DEL LISTINO */
-.price-card {
-    width: 30%;
-    padding: 40px;
+.listino-card {
+    width: 27%;
+    height: 380px;
     border-radius: 20px;
-    text-align: left;
-    color: white;
-    background: linear-gradient(145deg, #4b26dd, #2b62d9);
-    box-shadow: 0 0 25px rgba(0,0,0,0.08);
+    background: linear-gradient(180deg, #C472FF, #4A7DFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.price-card h3 {
-    font-size: 24px;
-    font-weight: 700;
+.listino-card img {
+    width: 60%;
+    opacity: 0.9;
 }
 
-.price-card h4 {
-    font-size: 18px;
-    font-weight: 500;
-    margin: 12px 0 20px 0;
+.fine {
+    margin-top: 40px;
+    font-size: 13px;
+    color: #444;
 }
 
-.price-card p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #eeeeee;
+/* ---------------- ANIMAZIONI (solo aggiunte) ---------------- */
+/* classi di utilità per animazioni: non modificano layout */
+.fade-in {
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-/* ---------------- FOOTER ---------------- */
-footer {
-    width: 100%;
-    padding: 35px;
-    background: #1a1a1a;
-    color: #fff;
-    text-align: center;
-    margin-top: 120px;
+.slide-up {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-footer p {
-    font-size: 14px;
-    color: #ccc;
+/* reveal generico per gruppi di elementi */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+/* children reveal: applichiamo ritardi tramite JS o classi delay */
+.reveal-child {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+/* classi delay per fallback CSS (JS aggiunge altre) */
+.delay-1 { transition-delay: 0.18s; }
+.delay-2 { transition-delay: 0.33s; }
+.delay-3 { transition-delay: 0.48s; }
+.delay-4 { transition-delay: 0.66s; }
+.delay-5 { transition-delay: 0.84s; }
+
+/* quando JS aggiunge la classe "visible" vengono animate */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* piccole ottimizzazioni responsive */
+@media (max-width: 900px) {
+    .cards { flex-direction: column; }
+    .card, .listino-card { width: 100%; }
+    .hero { padding: 100px 30px; }
 }
