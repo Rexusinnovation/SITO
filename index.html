@@ -3,23 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rexus Innovation — Presenza Online Professionale</title>
-  <meta name="description" content="Rexus Innovation - Soluzioni digitali, sviluppo web e design professionale." />
+  <title>Rexus Innovation</title>
+  <meta name="description" content="Rexus Innovation - Soluzioni Web & Software" />
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="logo.png" />
+  <link rel="icon" href="logo.png">
 </head>
 <body>
 
   <!-- NAV -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="wrap">
-      <a class="brand" href="#home"><img src="logo.png" alt="Rexus Innovation Logo" class="logo"></a>
-      <nav class="main-nav">
-        <a href="#home">Home</a>
-        <a href="#chi-siamo">Chi Siamo</a>
-        <a href="#listino">Listino</a>
-        <a href="#contatti">Contattaci</a>
+      <a class="brand" href="#home"><img src="logo.png" alt="Rexus Innovation logo" class="brand-logo"></a>
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#chi-siamo" class="nav-item">Chi Siamo</a>
+        <a href="#listino" class="nav-item">Listino</a>
+        <a href="#contatti" class="nav-item btn-outline">Contattaci</a>
       </nav>
+
       <button class="menu-toggle" aria-label="Apri menu">☰</button>
     </div>
   </header>
@@ -27,138 +30,107 @@
   <!-- HERO -->
   <main>
     <section id="home" class="hero">
+      <!-- decorative meshes -->
+      <div class="mesh mesh-left" aria-hidden="true"></div>
+      <div class="mesh mesh-right" aria-hidden="true"></div>
+
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <h1>La tua presenza online</h1>
-          <p class="lead">
-            Connettiamo il tuo brand al successo digitale. Il nostro team di esperti in sviluppo web trasforma idee in esperienze online straordinarie, creando siti innovativi e funzionali che lasciano un'impronta duratura.
+          <h1 class="hero-title">La Tua Presenza <span class="hero-accent">Online</span></h1>
+          <p class="hero-lead">
+            Connettiamo il tuo brand al successo digitale. Il nostro team di esperti in sviluppo web trasforma idee in esperienze online straordinarie, creando siti web innovativi e funzionali che lasciano un'impronta duratura.
           </p>
-          <div class="actions">
-            <a class="btn primary" href="#contatti">Contattaci</a>
-            <a class="btn ghost" href="#listino">Prezzi</a>
+
+          <div class="hero-cta">
+            <a class="btn btn-ghost" href="#listino">Prezzi</a>
+            <a class="btn btn-primary" href="#contatti">Contattaci</a>
           </div>
         </div>
 
         <div class="hero-media">
-          <img src="hero.jpg" alt="Hero illustration" loading="lazy">
+          <img src="hero.jpg" alt="Mockup sito Rexus" loading="lazy">
         </div>
       </div>
     </section>
 
-    <!-- WHY -->
-    <section class="why">
+    <!-- CHI SIAMO -->
+    <section id="chi-siamo" class="section about">
       <div class="wrap">
-        <h2>Perché scegliere i nostri servizi?</h2>
-        <p>
-          Specializzati nella creazione di siti web che affascinano e convertono. Che tu abbia bisogno di una landing, un sito informativo o una piattaforma e-commerce complessa, abbiamo esperienza e processi consolidati per consegnare risultati misurabili.
+        <h2>Chi Siamo</h2>
+        <p class="lead">
+          Rexus Innovation è un team di designer e sviluppatori con esperienza pluriennale nella progettazione e realizzazione di soluzioni digitali su misura. Lavoriamo con metodologie agili, curando UX, performance e scalabilità.
         </p>
 
-        <div class="grid features">
-          <article>
-            <h3>Esperienza su misura</h3>
-            <p>Progettiamo soluzioni custom, focalizzandoci sull'obiettivo commerciale del cliente e sull'esperienza utente.</p>
+        <div class="features">
+          <article class="feature">
+            <h3>Soluzioni Custom</h3>
+            <p>Progetti completi, dall'analisi iniziale al rilascio in produzione, con focus su risultati concreti.</p>
           </article>
 
-          <article>
+          <article class="feature">
             <h3>Performance & SEO</h3>
-            <p>Codice ottimizzato, caricamento rapido, struttura SEO-friendly per scalare visibilità e conversioni.</p>
+            <p>Codice ottimizzato, caricamenti rapidi e struttura SEO-friendly per massimizzare visibilità e conversioni.</p>
           </article>
 
-          <article>
-            <h3>Supporto e crescita</h3>
-            <p>Assistenza post-lancio, monitoraggio e iterazioni. Non consegniamo solo siti: costruiamo relazioni tecniche durature.</p>
+          <article class="feature">
+            <h3>Supporto Continuo</h3>
+            <p>Assistenza post-lancio e monitoraggio: continuiamo a migliorare i prodotti insieme a te.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- LONG PROMO / MISSION -->
-    <section class="mission">
+    <!-- LISTINO (senza prezzi dettagliati) -->
+    <section id="listino" class="section listino">
       <div class="wrap">
-        <h2>Esplora il mondo web</h2>
-        <h3>Un universo di creatività in ogni sito web</h3>
-        <p>
-          Ti offriamo un'esperienza digitale unica: i nostri siti non sono solamente oggetti tecnologici ma vere e proprie opere d'arte digitale.
-          La passione per il design, l'attenzione per i dettagli e l'utilizzo di tecnologie di alta qualità sono il cuore dei nostri progetti.
-          Ogni sito è pensato come un viaggio per l'utente, studiato per comunicare i valori del brand, aumentare l'engagement e massimizzare le conversioni.
-        </p>
+        <h2>Offerte & Pacchetti</h2>
+        <p class="lead">Proponiamo pacchetti modulari per adattarsi alle esigenze di ogni azienda: dalla landing page al progetto enterprise. Contattaci per una consulenza personalizzata.</p>
 
-        <h3>Dove la dedizione diventa codice</h3>
-        <p>
-          Il nostro metodo nasce da anni di esperienza e perfezionamento: analisi strategica, design centrato sull'utente, sviluppo scalabile e testing continuo.
-          Ogni progetto riceve la stessa cura artigianale: la trasformazione delle tue idee in un prodotto digitale solido e misurabile.
-        </p>
-
-        <h3>Un luogo di collaborazione</h3>
-        <p>
-          Rexus Innovation è più di un fornitore: è un partner. Collaboriamo con il cliente in tutte le fasi progettuali, garantendo comunicazione chiara, processi rapidi e consegne puntuali. E se hai urgenze, possiamo organizzare rilasci rapidi su richiesta.
-        </p>
+        <div class="cards">
+          <div class="card">
+            <h3>Sito Vetrina</h3>
+            <p>Sito statico o dinamico, perfetto per presentare la tua attività online.</p>
+          </div>
+          <div class="card">
+            <h3>Sito Avanzato</h3>
+            <p>Multi-pagina con integrazioni, blog, area clienti e funzioni personalizzate.</p>
+          </div>
+          <div class="card">
+            <h3>E-commerce</h3>
+            <p>Soluzioni di vendita online robuste, integrate con pagamenti e gestione catalogo.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- PRICING / LISTINO -->
-    <section id="listino" class="pricing">
-      <div class="wrap">
-        <h2>Esplora il nostro listino</h2>
-        <p>Attribuiamo massima importanza alla qualità dei nostri servizi assicurando prezzi competitivi e trasparenti.</p>
+    <!-- CONTATTI -->
+    <section id="contatti" class="section contact">
+      <div class="wrap contact-grid">
+        <div class="contact-info">
+          <h2>Contattaci</h2>
+          <p>Preferisci parlarci direttamente? Scrivici e ti risponderemo entro breve.</p>
 
-        <div class="grid prices">
-          <div class="price">
-            <h3>Sito Web Basic</h3>
-            <div class="amount">€350.00</div>
-            <p>Sito statico monopagina, adatto per piccole attività e vetrine. Prezzo indicativo, varia in base a richieste personalizzate.</p>
-          </div>
-
-          <div class="price">
-            <h3>Sito Web Next</h3>
-            <div class="amount">€550.00</div>
-            <p>Sito dinamico multi-pagina, integrazione di funzionalità base come prenotazioni, blog o catalogo prodotti. Prezzo indicativo.</p>
-          </div>
-
-          <div class="price">
-            <h3>Sito Web Premium</h3>
-            <div class="amount">€1200.00</div>
-            <p>Soluzione completa con design e funzionalità avanzate, integrazioni, area clienti, ecommerce e personalizzazioni specifiche. Prezzo indicativo.</p>
+          <div class="contact-details">
+            <p><strong>Email:</strong> <a href="mailto:info@rexusinnovation.it">info@rexusinnovation.it</a></p>
+            <p><strong>Telefono:</strong> +39 347 853 7767</p>
           </div>
         </div>
 
-        <p class="note">Tutte le modifiche extra verranno fatturate secondo quanto concordato durante il processo di sviluppo.</p>
-      </div>
-    </section>
+        <div class="contact-form">
+          <form id="contactForm" action="#" method="POST">
+            <label class="sr-only" for="message">Messaggio</label>
+            <textarea id="message" name="message" placeholder="Descrivi il tuo progetto..." required></textarea>
 
-    <!-- CONTACT -->
-    <section id="contatti" class="contact">
-      <div class="wrap">
-        <h2>Contattaci quando vuoi</h2>
+            <div class="row">
+              <input id="name" name="name" type="text" placeholder="Nome" required>
+              <input id="email" name="email" type="email" placeholder="Email" required>
+            </div>
 
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Dove?</h3>
-            <p>Contattaci comodamente online: siamo un'azienda smart con team distribuito.</p>
-
-            <h3>Quando?</h3>
-            <p>Tutti i giorni tranne la Domenica.<br>14:00–00:00 Lunedì–Venerdì<br>07:00–00:00 Sabato</p>
-
-            <h3>Come?</h3>
-            <p>Telefono: +39 347 853 7767<br>Email: <a href="mailto:info@rexusinnovation.it">info@rexusinnovation.it</a></p>
-          </div>
-
-          <div class="contact-form">
-            <form id="contactForm" action="#" method="POST">
-              <label class="sr">Messaggio</label>
-              <textarea name="message" placeholder="Descrivi il tuo progetto..." required></textarea>
-
-              <div class="row">
-                <input name="name" type="text" placeholder="Nome" required>
-                <input name="email" type="email" placeholder="Email" required>
-              </div>
-
-              <div class="actions">
-                <button type="submit" class="btn primary">Invia richiesta</button>
-                <small class="hint">Oppure scrivici a <a href="mailto:info@rexusinnovation.it">info@rexusinnovation.it</a></small>
-              </div>
-            </form>
-          </div>
+            <div class="actions">
+              <button class="btn btn-primary" type="submit">Invia richiesta</button>
+              <small class="hint">Oppure scrivici a <a href="mailto:info@rexusinnovation.it">info@rexusinnovation.it</a></small>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -166,17 +138,15 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="wrap">
-      <div class="left">
-        <img src="logo.png" class="footer-logo" alt="Rexus logo">
-        <p>© <span id="year"></span> Rexus Innovation. All Rights Reserved</p>
+    <div class="wrap footer-inner">
+      <div class="footer-left">
+        <img src="logo.png" alt="Rexus logo" class="footer-logo">
+        <p>© <span id="year"></span> Rexus Innovation. All rights reserved.</p>
       </div>
-      <div class="right">
-        <nav>
-          <a href="#">Privacy</a>
-          <a href="#">Termini</a>
-        </nav>
-      </div>
+      <nav class="footer-nav">
+        <a href="#">Privacy</a>
+        <a href="#">Termini</a>
+      </nav>
     </div>
   </footer>
 
