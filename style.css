@@ -126,7 +126,7 @@ nav a:hover {
     font-weight: 500;
 }
 
-/* ---------------- ABOUT / CHI SIAMO ---------------- */
+/* ---------------- ABOUT ---------------- */
 .about {
     width: 100%;
     padding: 120px 80px;
@@ -220,74 +220,92 @@ nav a:hover {
 .listino-cards {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 35px;
 }
 
+/* CARD BASE (gradient viola → blu come negli screenshot) */
 .listino-card {
-    width: 27%;
-    height: 380px;
-    border-radius: 20px;
+    width: 28%;
+    height: 420px;
+    border-radius: 22px;
     background: linear-gradient(180deg, #C472FF, #4A7DFF);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 35px;
+    position: relative;
+    overflow: hidden;
 }
 
+/* CARD CON BLOB (uguale allo screenshot) */
+.listino-card.blob {
+    background: url("assets/blob.png"), linear-gradient(180deg, #1A0066, #30006E);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    align-items: flex-start;
+    text-align: left;
+    padding: 40px;
+}
+
+/* LOGO NELLE CARD VUOTE */
 .listino-card img {
     width: 60%;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
+/* TESTO NELLA CARD */
+.listino-card h3 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.listino-card .price {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+.listino-card p {
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: 85%;
+}
+
+/* footer listino */
 .fine {
     margin-top: 40px;
     font-size: 13px;
     color: #444;
 }
 
-/* ---------------- ANIMAZIONI (solo aggiunte) ---------------- */
-/* classi di utilità per animazioni: non modificano layout */
-.fade-in {
-    opacity: 0;
-    transform: translateY(0);
-    transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-.slide-up {
-    opacity: 0;
-    transform: translateY(25px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-/* reveal generico per gruppi di elementi */
-.reveal {
-    opacity: 0;
-    transform: translateY(25px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
-}
-
-/* children reveal: applichiamo ritardi tramite JS o classi delay */
+/* ---------------- ANIMAZIONI ---------------- */
+.fade-in,
+.slide-up,
+.reveal,
 .reveal-child {
     opacity: 0;
     transform: translateY(25px);
     transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-/* classi delay per fallback CSS (JS aggiunge altre) */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 .delay-1 { transition-delay: 0.18s; }
 .delay-2 { transition-delay: 0.33s; }
 .delay-3 { transition-delay: 0.48s; }
 .delay-4 { transition-delay: 0.66s; }
 .delay-5 { transition-delay: 0.84s; }
 
-/* quando JS aggiunge la classe "visible" vengono animate */
-.visible {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-/* piccole ottimizzazioni responsive */
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 900px) {
     .cards { flex-direction: column; }
-    .card, .listino-card { width: 100%; }
+    .card, .listino-card { width: 100%; height: auto; }
     .hero { padding: 100px 30px; }
 }
