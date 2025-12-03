@@ -223,7 +223,7 @@ nav a:hover {
     gap: 35px;
 }
 
-/* CARD BASE (gradient viola → blu come negli screenshot) */
+/* CARD BASE */
 .listino-card {
     width: 28%;
     height: 420px;
@@ -238,7 +238,7 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* CARD CON BLOB (uguale allo screenshot) */
+/* CARD PREMIUM CON BLOB */
 .listino-card.blob {
     background: url("assets/blob.png"), linear-gradient(180deg, #1A0066, #30006E);
     background-size: cover;
@@ -249,13 +249,11 @@ nav a:hover {
     padding: 40px;
 }
 
-/* LOGO NELLE CARD VUOTE */
 .listino-card img {
     width: 60%;
     opacity: 0.85;
 }
 
-/* TESTO NELLA CARD */
 .listino-card h3 {
     font-size: 23px;
     font-weight: 600;
@@ -275,7 +273,6 @@ nav a:hover {
     max-width: 85%;
 }
 
-/* footer listino */
 .fine {
     margin-top: 40px;
     font-size: 13px;
@@ -308,4 +305,40 @@ nav a:hover {
     .cards { flex-direction: column; }
     .card, .listino-card { width: 100%; height: auto; }
     .hero { padding: 100px 30px; }
+}
+
+/* ---------------------------------------------------- */
+/* -----------------  FLIP 3D ANIMATION --------------- */
+/* ---------------------------------------------------- */
+
+.listino-card {
+    perspective: 1000px;
+}
+
+.listino-card .front,
+.listino-card .back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    transition: transform 0.7s ease;
+    border-radius: 22px;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listino-card .back {
+    transform: rotateY(180deg);
+    background: rgba(0,0,0,0.15);
+    color: white;
+    text-align: center;
+}
+
+.listino-card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.listino-card:hover .back {
+    transform: rotateY(360deg);
 }
