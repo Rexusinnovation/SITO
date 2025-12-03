@@ -153,12 +153,6 @@ nav a:hover {
     line-height: 1.6;
 }
 
-.subtitle-about a {
-    color: #2b62d9;
-    text-decoration: none;
-    font-weight: 500;
-}
-
 .cards {
     display: flex;
     justify-content: center;
@@ -198,15 +192,14 @@ nav a:hover {
 
 .card h4 {
     font-size: 17px;
-    font-weight: 500;
     margin: 10px 0 15px 0;
     transition: color 0.35s ease;
 }
 
 .card p {
+    font-size: 15px;
     color: #666;
     line-height: 1.6;
-    font-size: 15px;
     transition: color 0.35s ease;
 }
 
@@ -216,22 +209,6 @@ nav a:hover {
     padding: 110px 80px;
     text-align: center;
     background: white;
-}
-
-.listino h2 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-
-.listino .blue {
-    color: #2b62d9;
-}
-
-.listino > p {
-    font-size: 17px;
-    color: #555;
-    margin-bottom: 60px;
 }
 
 .listino-cards {
@@ -246,9 +223,8 @@ nav a:hover {
     border-radius: 22px;
     background: linear-gradient(180deg, #C472FF, #4A7DFF);
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    position: relative;
     perspective: 1000px;
-    transform-style: preserve-3d;
+    position: relative;
 }
 
 .listino-card .front,
@@ -256,21 +232,19 @@ nav a:hover {
     position: absolute;
     inset: 0;
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     transition: transform 0.75s cubic-bezier(.2,.9,.2,1);
-    border-radius: 22px;
     padding: 35px;
+    border-radius: 22px;
 }
 
 .listino-card .front {
-    transform: rotateY(0deg);
     z-index: 2;
+    transform: rotateY(0deg);
 }
 
 .listino-card .back {
     transform: rotateY(-180deg);
-    z-index: 1;
-    background: rgba(10,10,50,0.93);
+    background: rgba(10,10,50,0.95);
     color: white;
     text-align: left;
 }
@@ -288,15 +262,50 @@ nav a:hover {
     opacity: 0.9;
 }
 
-.listino-card .price {
-    font-size: 22px;
-    margin-bottom: 15px;
+/* ---------------- FOOTER VERSIONE A ---------------- */
+.site-footer {
+    background: #1c1c1c;
+    padding: 80px 20px;
+    margin-top: 150px;
+    color: #dcdcdc;
 }
 
-.fine {
-    margin-top: 40px;
+.footer-center {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2b62d9;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.footer-social img {
+    width: 42px;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.footer-text {
     font-size: 13px;
-    color: #444;
+    margin: 5px 0;
+}
+
+.footer-separator {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 25px 0;
+}
+
+.footer-legal {
+    font-size: 11px;
+    line-height: 1.55;
+    color: #b5b5b5;
 }
 
 /* ---------------- ANIMAZIONI ---------------- */
@@ -314,50 +323,9 @@ nav a:hover {
     transform: translateY(0) !important;
 }
 
-.delay-1 { transition-delay: 0.18s; }
-.delay-2 { transition-delay: 0.33s; }
-.delay-3 { transition-delay: 0.48s; }
-.delay-4 { transition-delay: 0.66s; }
-.delay-5 { transition-delay: 0.84s; }
-
 /* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 900px) {
     .cards { flex-direction: column; }
     .card, .listino-card { width: 100%; height: auto; }
     .hero { padding: 100px 30px; }
-}
-
-/* ---------------- FOOTER ---------------- */
-.site-footer {
-    margin-top: 120px;
-    background: #1a1a1a;
-    color: #dedede;
-    padding: 50px 20px;
-    text-align: center;
-    font-size: 14px;
-}
-
-.site-footer .footer-logo {
-    font-size: 30px;
-    color: #2b62d9;
-    font-weight: 600;
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.site-footer p {
-    margin: 6px 0;
-}
-
-.site-footer a {
-    color: #8eb7ff;
-    text-decoration: none;
-}
-
-.site-footer .footer-note {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 12px;
-    color: #bdbdbd;
 }
