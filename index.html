@@ -1,14 +1,13 @@
+<!-- ======================= index.html ======================= -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rexus Innovation</title>
-
-    <!-- Font Poppins come nel sito originale -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <title>Unicodeit</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Font Poppins come l’originale -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,12 +15,12 @@
     <header class="fade-in">
         <div class="logo">
             <img src="assets/logo.png" alt="Logo">
-            <div class="subtitle">INNOVATION & TECHNOLOGY</div>
+            <div class="subtitle">Soluzioni Web &amp; Software</div>
         </div>
 
         <nav>
             <a href="#home">Home</a>
-            <a href="#about">Chi siamo</a>
+            <a href="#about">Chi Siamo</a>
             <a href="#listino">Listino</a>
         </nav>
     </header>
@@ -41,8 +40,8 @@
             </p>
 
             <div class="buttons">
-                <a href="#listino" class="btn">Listino</a>
-                <a href="#about" class="btn-outline">Scopri di più</a>
+                <a href="#listino" class="btn">Prezzi</a>
+                <a href="#contattaci" class="btn-outline">Contattaci</a>
             </div>
         </div>
     </section>
@@ -52,10 +51,10 @@
         <h2 class="slide-up">Perchè scegliere <span class="blue">i nostri Servizi?</span></h2>
 
         <p class="subtitle-about slide-up delay-1">
-           Specializzati nella creazione di siti Web eccezionali che affascinano e coinvolgono il tuo pubblico di
+            Specializzati nella creazione di siti Web eccezionali che affascinano e coinvolgono il tuo pubblico di
             destinazione. Che tu abbia bisogno di una semplice landing page o di una complessa piattaforma
             di e-commerce, abbiamo l'esperienza per dare vita alla tua visione digitale.
-            Qui puoi vedere un template dei nostri lavori.
+            Qui puoi vedere un template dei nostri lavori: <a href="#">Sample</a>
         </p>
 
         <div class="cards">
@@ -66,7 +65,10 @@
                 <p>
                     Ti attende un'esperienza digitale unica, i nostri siti
                     web non sono solo creazioni tecnologiche, ma
-                    vere e proprie opere d'arte digitali.
+                    vere e proprie opere d'arte digitali. La freschezza delle
+                    idee e le combinazioni esclusive di design
+                    trasformano ogni sito in un viaggio online
+                    straordinario.
                 </p>
             </div>
 
@@ -98,7 +100,7 @@
     <section class="listino" id="listino">
         <h2 class="slide-up">Esplora il nostro <span class="blue">Listino</span></h2>
         <p class="slide-up delay-1">
-            Noi di Rexus Innovation attribuiamo la massima importanza alla qualità dei nostri servizi,
+            Noi di Unicodeit attribuiamo la massima importanza alla qualità dei nostri servizi,
             mantenendo prezzi competitivi tra i più vantaggiosi sul mercato.
         </p>
 
@@ -107,66 +109,144 @@
             <!-- Card 1 -->
             <div class="listino-card reveal delay-1">
                 <div class="front">
-                    <img src="assets/card1.png" alt="Servizio 1">
+                    <img src="assets/card1.png" alt="Sito Web Basic">
                 </div>
                 <div class="back">
-                    <p>Sito Statico monopagina, adatto
-                    per bar o piccole attività simili.</p>
+                    <h3>Sito Web Basic</h3>
+                    <div class="price">€350.00</div>
+                    <p>
+                        Sito Statico monopagina, adatto per bar o piccole attività simili.
+                        (Prezzi indicativi, variano in base alle modifiche.)
+                    </p>
                 </div>
             </div>
 
-            <!-- Card Premium -->
-            <div class="listino-card blob reveal delay-2">
+            <!-- Card 2 -->
+            <div class="listino-card reveal delay-2">
                 <div class="front">
-                    <img src="assets/card2.png" alt="Servizio 2">
+                    <img src="assets/card2.png" alt="Sito Web Next">
                 </div>
                 <div class="back">
-                    <h3>Sito Web Premium</h3>
-                    <div class="price">€ 49,99</div>
-                    <p>Sito professionale con design moderno, responsive e ottimizzato per mobile.</p>
+                    <h3>Sito Web Next</h3>
+                    <div class="price">€550.00</div>
+                    <p>
+                        Sito dinamico, più complesso, più pagine, possibilità di aggiunta
+                        sistemi come prenotazioni o simili.
+                        (Prezzi indicativi, variano in base alle modifiche.)
+                    </p>
                 </div>
             </div>
 
             <!-- Card 3 -->
             <div class="listino-card reveal delay-3">
                 <div class="front">
-                    <img src="assets/card3.png" alt="Servizio 3">
+                    <img src="assets/card3.png" alt="Sito Web Premium">
                 </div>
                 <div class="back">
-                    <p>Dettagli del servizio visibili al flip.</p>
+                    <h3>Sito Web Premium</h3>
+                    <div class="price">€1200.00</div>
+                    <p>
+                        Sito completo di qualsiasi funzione, sistema e particolare estetico richiesto;
+                        adatto a qualsiasi occasione da voi richiesta.
+                        (Prezzi indicativi, variano in base alle modifiche.)
+                    </p>
                 </div>
             </div>
 
         </div>
 
-        <p class="fine">* I prezzi possono variare in base alle personalizzazioni richieste.</p>
+        <p class="fine">
+            Tutte le modifiche verranno inviate come fatture all'indirizzo inserito mail durante il pagamento.
+        </p>
     </section>
 
-    <!-- ---------------- FOOTER VERSIONE A (ANIMATO) ---------------- -->
-    <footer class="site-footer fade-in">
+    <!-- ---------------- CONTATTI (come screenshot) ---------------- -->
+    <section class="contatti-section fade-in" id="contattaci">
+
+        <h2 class="contatti-title slide-up">
+            Contattaci <span>quando vuoi</span>
+        </h2>
+
+        <div class="contatti-box reveal">
+
+            <div class="contatti-item">
+                <div class="icon">
+                    <!-- pin svg -->
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C8.7 2 6 4.7 6 8c0 4.2 4.6 8.9 5.6 9.9.2.2.6.2.8 0C13.4 16.9 18 12.2 18 8c0-3.3-2.7-6-6-6zm0 7.8A1.8 1.8 0 1 1 12 6a1.8 1.8 0 0 1 0 3.8z"/>
+                    </svg>
+                </div>
+                <h3>Dove?</h3>
+                <p>Contattaci comodamente online!<br>Siamo un'Azienda Smart</p>
+            </div>
+
+            <div class="contatti-item">
+                <div class="icon">
+                    <!-- clock svg -->
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm-.5 2v6l4 2.4.8-1.4-3.3-2V6h-1.5z"/>
+                    </svg>
+                </div>
+                <h3>Quando?</h3>
+                <p>
+                    Tutti i giorni aperti tranne la Domenica<br>
+                    14:00–00:00 Lunedì–Venerdì<br>
+                    07:00–00:00 Sabato
+                </p>
+            </div>
+
+            <div class="contatti-item">
+                <div class="icon">
+                    <!-- phone svg -->
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17.5 15.1c-.7-.3-1.6-.1-2.2.4l-1.1 1.1c-1.8-.9-3.3-2.3-4.3-4.1l1.1-1.1c.6-.6.8-1.5.4-2.2L9.2 5.3C8.7 4.5 7.7 4.3 7 4.7L5.2 5.7C4.5 6.1 4.1 7 4.2 7.8c.4 2.4 1.5 4.8 3.4 7 1.8 2.2 4 3.7 6.3 4.4.8.2 1.7-.1 2.2-.7l1.1-1.3c.6-.7.4-1.7-.3-2.3l-1.4-1.1z"/>
+                    </svg>
+                </div>
+                <h3>Come?</h3>
+                <p>
+                    +39 347 853 7767<br>
+                    <a href="mailto:unicode2223@gmail.com">unicode2223@gmail.com</a>
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ---------------- FOOTER VERSIONE A ---------------- -->
+    <footer class="site-footer">
+
         <div class="footer-center">
 
-            <div class="footer-logo">Rexus Innovation</div>
+            <div class="footer-logo">Unicodeit</div>
 
             <div class="footer-social">
-                <img src="assets/insta.png" alt="Instagram">
+                <!-- icona "insta" semplice -->
+                <div class="footer-social-circle">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                        <circle cx="12" cy="12" r="4.2"></circle>
+                        <circle cx="17.2" cy="6.8" r="1.2"></circle>
+                    </svg>
+                </div>
             </div>
 
             <p class="footer-text">© Copyright <strong>Unicodeit</strong>. All Rights Reserved</p>
-            <p class="footer-text">Designed &amp; Developed by <a href="#">Grottone Arboritanza Gregorio</a></p>
+            <p class="footer-text">Designed and Developed by <a href="#">Alessandro Mannarà</a></p>
 
             <div class="footer-separator"></div>
 
             <p class="footer-legal">
-                Rexus Innovation è un marchio registrato di Rexus Innovation, Inc. negli Stati Uniti e in altri paesi.
-                Questo sito non è associato, approvato o sponsorizzato da Rexus Innovation, Inc.
+                Unicode è un marchio registrato di Unicode, Inc. negli Stati Uniti e in altri paesi.
+                Questo sito non è in alcun modo associato, approvato o sponsorizzato da Unicode, Inc.
+                (noto anche come Unicode Consortium).
             </p>
 
         </div>
+
     </footer>
 
     <!-- ---------------- JAVASCRIPT ANIMAZIONI ---------------- -->
     <script src="script.js"></script>
-
 </body>
 </html>
