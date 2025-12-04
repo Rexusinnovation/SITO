@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rexus Innovation</title>
+
+    <!-- Font Poppins come nel sito originale -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -138,9 +142,8 @@
         <p class="fine">* I prezzi possono variare in base alle personalizzazioni richieste.</p>
     </section>
 
-    <!-- ---------------- FOOTER VERSIONE A (IDENTICO) ---------------- -->
-    <footer class="site-footer">
-
+    <!-- ---------------- FOOTER VERSIONE A (ANIMATO) ---------------- -->
+    <footer class="site-footer fade-in">
         <div class="footer-center">
 
             <div class="footer-logo">Rexus Innovation</div>
@@ -150,7 +153,7 @@
             </div>
 
             <p class="footer-text">© Copyright <strong>Unicodeit</strong>. All Rights Reserved</p>
-            <p class="footer-text">Designed & Developed by <a href="#">Grottone Arboritanza Gregorio</a></p>
+            <p class="footer-text">Designed &amp; Developed by <a href="#">Grottone Arboritanza Gregorio</a></p>
 
             <div class="footer-separator"></div>
 
@@ -160,22 +163,10 @@
             </p>
 
         </div>
-
     </footer>
 
     <!-- ---------------- JAVASCRIPT ANIMAZIONI ---------------- -->
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, { threshold: 0.2 });
-
-        document.querySelectorAll(".fade-in, .slide-up, .reveal, .reveal-child")
-            .forEach(el => observer.observe(el));
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
