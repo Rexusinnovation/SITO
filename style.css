@@ -622,3 +622,13 @@ nav a:hover {
         transform: none;
     }
 }
+/* FLIP CARD MOBILE */
+@media (max-width: 768px) {
+    .listino-card.is-flipped .front {
+        transform: rotateY(180deg);
+    }
+
+    .listino-card.is-flipped .back {
+        transform: rotateY(0deg);
+    }
+}
