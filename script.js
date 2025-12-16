@@ -26,3 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleReveal, { passive: true });
     window.addEventListener('resize', handleReveal);
 });
+<script>
+if (window.innerWidth <= 768) {
+    document.querySelectorAll('.listino-card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('is-flipped');
+        });
+    });
+}
+</script>
