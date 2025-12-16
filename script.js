@@ -21,24 +21,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 document.addEventListener("DOMContentLoaded", () => {
-
-    /* ===== HAMBURGER MENU ===== */
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.getElementById("nav-menu");
-
-    if (hamburger && navMenu) {
-        hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-    }
-
-    /* ===== LISTINO TAP (SOLO MOBILE) ===== */
-    if (window.innerWidth <= 768) {
-        document.querySelectorAll(".listino-card").forEach(card => {
-            card.addEventListener("click", () => {
-                card.classList.toggle("is-flipped");
-            });
-        });
-    }
-
-});
