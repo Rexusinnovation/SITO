@@ -22,11 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // chiamata iniziale e bind scroll + resize
-    handleReveal();
-    window.addEventListener('scroll', handleReveal, { passive: true });
-    window.addEventListener('resize', handleReveal);
-});
-<script>
 if (window.innerWidth <= 768) {
     document.querySelectorAll('.listino-card').forEach(card => {
         card.addEventListener('click', () => {
@@ -34,4 +29,4 @@ if (window.innerWidth <= 768) {
         });
     });
 }
-</script>
+
