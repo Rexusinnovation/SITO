@@ -591,3 +591,9 @@ nav a:hover {
         backface-visibility: visible;
     }
 }
+
+.fade-in,
+.slide-up,
+.reveal {
+    opacity: 1 !important;
+}
