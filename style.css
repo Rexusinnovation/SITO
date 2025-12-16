@@ -535,3 +535,41 @@ nav a:hover {
         text-align: center;
     }
 }
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #2f63c7;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    nav a {
+        padding: 15px;
+        display: block;
+        font-size: 18px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+}
