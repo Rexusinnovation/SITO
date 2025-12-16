@@ -573,7 +573,7 @@ nav a:hover {
         display: flex;
     }
 } 
-/* ================= LISTINO MOBILE FIX ================= */
+/* ===== FIX LISTINO MOBILE ===== */
 @media (max-width: 768px) {
 
     .listino-card {
@@ -581,45 +581,13 @@ nav a:hover {
         perspective: none;
     }
 
-    .listino-card .front,
+    .listino-card .front {
+        display: none;
+    }
+
     .listino-card .back {
         position: relative;
-        transform: none !important;
+        transform: rotateY(0deg);
         backface-visibility: visible;
-        height: auto;
-        padding: 28px;
-    }
-
-    .listino-card .front {
-        border-radius: 22px 22px 0 0;
-        justify-content: center;
-    }
-
-    .listino-card .back {
-        border-radius: 0 0 22px 22px;
-        background:
-            linear-gradient(180deg, rgba(25,0,80,0.92), rgba(10,10,30,0.98)),
-            url("hero-bg.png") center/cover no-repeat;
-    }
-
-    .listino-card:hover .front,
-    .listino-card:hover .back {
-        transform: none;
-    }
-
-    .listino-card h3 {
-        font-size: 21px;
-        text-align: center;
-    }
-
-    .listino-card .price {
-        font-size: 24px;
-        text-align: center;
-        margin: 15px 0;
-    }
-
-    .listino-card p {
-        font-size: 14px;
-        text-align: center;
     }
 }
