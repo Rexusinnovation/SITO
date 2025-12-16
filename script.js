@@ -20,8 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
+// HAMBURGER MENU
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-    // chiamata iniziale e bind scroll + resize
+if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+}
+
+// FLIP CARD LISTINO SOLO SU MOBILE
 if (window.innerWidth <= 768) {
     document.querySelectorAll('.listino-card').forEach(card => {
         card.addEventListener('click', () => {
