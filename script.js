@@ -20,21 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-// HAMBURGER MENU
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-    });
-}
+    /* ===== HAMBURGER MENU ===== */
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
 
-// FLIP CARD LISTINO SOLO SU MOBILE
-if (window.innerWidth <= 768) {
-    document.querySelectorAll('.listino-card').forEach(card => {
-        card.addEventListener('click', () => {
-            card.classList.toggle('is-flipped');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
         });
-    });
-}
+    }
+
+    /* ===== LISTINO TAP (SOLO MOBILE) ===== */
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll(".listino-card").forEach(card => {
+            card.addEventListener("click", () => {
+                card.classList.toggle("is-flipped");
+            });
+        });
+    }
+
+});
