@@ -592,3 +592,13 @@ nav a:hover {
         backface-visibility: visible;
     }
 }
+/* ===== FIX LISTINO MOBILE VISIBILITÀ ===== */
+@media (max-width: 768px) {
+
+    .listino-card,
+    .listino-card.reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+}
